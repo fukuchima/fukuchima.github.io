@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery練習</title>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <h1>jQueryの練習</h1>
+    <ul id="menu"
+    	<li>0番</li>
+    	<li class="listitem">1番</li>
+    	<li class="listitem">2番</li>
+    	<li><a href="http://www.google.com">4番</a>    	
+    </ul>
+
+    <script lang="JavaScript/text">
+
+        $(function(){
+        	var img = $('<img>').attr('src','icon.png');
+        	$('#menu').after(img);
+        	$('#menu').prepend('<li>prepended by jquery</li>');
+      	  	$('#menu').append('<li>appended by jquery</li>');
+        });
+
+        $(function(){
+        	$('h1').click(function(){
+        		$(this).remove();
+        	});
+        	$('li:eq(2)').click(function(){
+        		$(this).empty();
+        	});
+        });
+        $(function(){
+        	$('li:eq(0)').html('<a href="">リンク</a>があります');
+        	$('li:eq(1)').text('書き換えました');
+        	$('li:eq(2)').wrap('<strong></strong>');
+        });
+        $(function(){
+            // $('ul').children().css('color','red');
+            $('ul').parent().css('color','red');
+            $('li:eq(1)').prev().css('color','blue');
+            $('li:eq(1)').next().css('color','pink');
+        });
+    </script>
+</body>
+</html>
