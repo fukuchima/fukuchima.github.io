@@ -42,6 +42,18 @@
             $('li:eq(1)').prev().css('color','blue');
             $('li:eq(1)').next().css('color','pink');
         });
-    </script>
+
+
+            </script>
+        <input type="button" id ="kick_ajax" value="ajax">
+        <script type="text/javascript">
+            $(function(){
+                $('#kick_ajax').click(function(){
+                    &('#main').load('contents.txt'), function(){
+                        alert('finish');
+                    });
+                });
+            });
+        </script>
 </body>
 </html>
