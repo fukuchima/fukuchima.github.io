@@ -44,13 +44,14 @@
         });
 
 
-            </script>
+        </script>
+
         <div id="main"></div>
         <input type="button" id ="kick_ajax" value="ajax">
         <script type="text/javascript">
             $(function(){
                 $('#kick_ajax').click(function(){
-                    &('#main').load('contents.txt'), function(){
+                    &('#main').load('contents.txt', function(){
                         alert('finish');
                     });
                 });
