@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrapの練習テンプレート</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  </head>
+
+  <body>
+
+  <div id="header" class="container" style="background:red;">header</div>
+
+  <div  class="container" >
+    <div class="row">
+      <div class="col-sm-3 hidden-xs" style="background:gray;">Side1</div>
+      <div class="col-sm-6 col-xs-6" style="background:green;">Main1</div>
+      <div class="col-sm-3  col-xs-4" style="background:orange;">Side2</div>
+      <div class="col-xs-2 visible-xs" style="background:pink;">xsSide3</div>
+    </div>
+  </div>
+  <div id="footer" class="container"style="background:blue;">footer</div>
+ 
+  <div class="container" style="padding:20px;">
+  <table class="table table-hover table-bordered table-striped table-condensed">
+    <thead>
+      <tr><th>Id</th><th>Score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>aaa</td><td>100</td></tr>
+      <tr><td>bbb</td><td>200</td></tr>
+      <tr><td>ccc</td><td>300</td></tr>
+    </tbody>
+  </table>
+  <input type="button" id ="war" value="Worning">
+  <script type="text/javascript">
+        $(function(){
+            $('#war').click(function(){
+              $('tr').attr('class','warning');
+        });
+      });
+  </script>
+  </div>
+
+  <script type="text/javascript">
+  </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
