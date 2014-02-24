@@ -10,282 +10,121 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <style type="text/css">
-      /*ブラウザの横幅が通常のとき、navbarに隠れるのを回避*/
-      body {
-        padding-top:60px;
-      }
-      /*ブラウザの横幅が980px以下のとき*/
-      @media (max-width: 980px) {
-        /* Remove any padding from the body */
-        body {
-          padding-top: 0;
-        }      
-      }
-    </style>
   </head>
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="">Dotinstall</a>
-      </div>
-      <div class="collapse navbar-collapse target">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="">Link1</a></li>
-          <li><a href="">Link2</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="">Link3</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div id="header" class="container" style="background:lightgray;">
-      <ul class="breadcrumb">
-        <li><a href="">Home</a></li>
-        <li><a href="">Users</a></li>
-        <li class="active">Fukuchi</li>
-      </ul>
-      <ul class="pagination">
-        <li class="disabled"><a href="">&laquo;</a></li>
-        <li class="active"><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-      </ul>
-      <ul class="pager">
-        <li class="previous"><a href="">Prev</a></li>
-        <li class="next"><a href="">Next</a></li>
-      </ul>
+  <div id="header" class="container" style="background:red;">header</div>
+
+  <div  class="container" >
+    <div class="row">
+      <div class="col-sm-3 hidden-xs" style="background:gray;">Side1</div>
+      <div class="col-sm-6 col-xs-6" style="background:green;">Main1</div>
+      <div class="col-sm-3  col-xs-4" style="background:orange;">Side2</div>
+      <div class="col-xs-2 visible-xs" style="background:pink;">xsSide3</div>
     </div>
-
+  </div>
+  <div id="footer" class="container"style="background:blue;">footer</div>
+ 
   <div class="container" style="padding:20px 0">
-    <ul class="nav nav-tabs" style="margin-bottom:15px;">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-      <li><a href="#about" data-toggle="tab">About</a></li>
-      <li><a href="#progress" data-toggle="tab">Progress</a></li>
-      <li><a href="#samples" data-toggle="tab">Samples</a></li>
-      <li><a href="#carousel" data-toggle="tab">Carousel</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane " id="carousel">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:500px;">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/img1.jpg" alt="img1">
-              <div class="carousel-caption">
-                img1
-              </div>
-            </div>
-             <div class="item">
-              <img src="img/img2.jpg" alt="img2">
-              <div class="carousel-caption">
-                img2
-              </div>
-            </div>
-             <div class="item">
-              <img src="img/img3.jpg" alt="img3">
-              <div class="carousel-caption">
-                img3
-              </div>
-            </div>
-             <div class="item">
-              <img src="img/img4.jpg" alt="img4">
-              <div class="carousel-caption">
-                img4
-              </div>
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div>
-
-      </div>
-      <div class="tab-pane active" id="home">
-        <p>Product A<span class="label label-primary">New!</span></p>
-        <p>Inbox <span class="badge">5</span></p>
-        <p>Inbox <span class="badge"></span>     </p> 
-        <p>ToolTip <a href="#" data-toggle="tooltip" title="ツールチップ"> here</a>ToolTip</p>
-        <p>Popover <a href="#" data-toggle="popover" title="説明" data-content="さらに説明"> here</a>Popover</p>
-        <script type="text/javascript">
+    <table class="table table-hover table-bordered table-striped table-condensed">
+      <thead>
+        <tr><th>Id</th><th>Score</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>aaa</td><td>100</td></tr>
+        <tr><td>bbb</td><td>200</td></tr>
+        <tr><td>ccc</td><td>300</td></tr>
+      </tbody>
+    </table>
+    <input type="button" id ="war" value="Worning">
+    <script type="text/javascript">
           $(function(){
-            $("[data-toggle=tooltip]").tooltip({
-              placement:'right'
-            });
+              $('#war').click(function(){
+                $('tr').attr('class','warning');
+                $('#frm').attr('class','has-error');
           });
-          $(function(){
-            $("[data-toggle=popover]").popover();
-          });
-        </script>
+        });
+    </script>
+  </div>
+
+  <div class="container container-fluid" style="padding:20px 0">
+    <form class="form-inline" style="margin-bottom:15px;">
+      <div id="frm" class="form-group">
+        <label class="sr-only control-lael" for="email">Email</label>
+        <input type="text" id="email" class="form-control" placeholder="email">        
+<!--         <span class="help-block">Error</span>-->      
       </div>
-      <div class="tab-pane" id="about">
-        <div class="alert alert-info">
-          <button class="close" data-dismiss="alert">&times;</button>
-          Notice!
-        </div>
-
-        <div class="panel panel-primary">
-          <div class="panel-heading">お知らせ</div>
-          <div class="panel-body">こんにちは</div>
-        </div>
-      </div>
-      <div class="tab-pane" id="progress">
-        <div class="progress">
-          <div class="progress-bar progress-bar-primary" style="width:60%" ></div>
-        </div>
-
-        <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-primary" style="width:45%" ></div>
-        </div>
-
-        <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-info" style="width:40%" ></div>
-          <div class="progress-bar progress-bar-primary" style="width:30%" ></div>
-          <div class="progress-bar progress-bar-warning" style="width:20%" ></div>
-        </div>
+      <div class="form-group">
+        <input type="submit" value="submit" class="btn btn-primary">
       </div>
 
-    <div class="tab-pane" id="samples">
-
-      <div  class="container" >
-        <div class="row">
-          <div class="col-sm-3 hidden-xs" style="background:gray;">Side1</div>
-          <div class="col-sm-6 col-xs-6" style="background:green;">Main1</div>
-          <div class="col-sm-3  col-xs-4" style="background:orange;">Side2</div>
-          <div class="col-xs-2 visible-xs" style="background:pink;">xsSide3</div>
+    </form>
+    <form class="form-horizontal" style="margin-bottom:15px;">
+      <div id="frm" class="form-group">
+        <label class="control-lael col-sm-2" for="email">Email</label>
+        <div class="col-sm-4">
+          <input type="text" id="email" class="form-control" placeholder="email">          
         </div>
       </div>
-      <div id="footer" class="container"style="background:blue;">footer</div>
-     
-      <div class="container" style="padding:20px 0">
-
-
-        <table class="table table-hover table-bordered table-striped table-condensed">
-          <thead>
-            <tr><th>Id</th><th>Score</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>aaa</td><td>100</td></tr>
-            <tr><td>bbb</td><td>200</td></tr>
-            <tr><td>ccc</td><td>300</td></tr>
-          </tbody>
-        </table>
-        <input type="button" id ="war" value="Worning">
-
-      <div class="container container-fluid" style="padding:20px 0">
-        <form class="form-inline" style="margin-bottom:15px;">
-          <div id="frm" class="form-group">
-            <label class="sr-only control-lael" for="email">Email</label>
-            <input type="text" id="email" class="form-control" placeholder="email">        
-    <!--         <span class="help-block">Error</span>-->      
-          </div>
-          <div class="form-group">
-            <input type="submit" value="submit" class="btn btn-primary">
-          </div>
-
-        </form>
-        <form class="form-horizontal" style="margin-bottom:15px;">
-          <div id="frm" class="form-group">
-            <label class="control-lael col-sm-2" for="email">Email</label>
-            <div class="col-sm-4">
-              <input type="text" id="email" class="form-control" placeholder="email">          
-            </div>
-          </div>
-          <div id="frm" class="form-group">
-            <label class="control-lael col-sm-2" for="email">Email</label>
-            <div class="col-sm-4">
-              <input type="text" id="email" class="form-control" placeholder="email">          
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-4">
-              <input type="submit" value="submit" class="btn btn-primary">
-            </div>
-          </div>
-        </form>
+      <div id="frm" class="form-group">
+        <label class="control-lael col-sm-2" for="email">Email</label>
+        <div class="col-sm-4">
+          <input type="text" id="email" class="form-control" placeholder="email">          
+        </div>
       </div>
-
-      <a data-toggle="modal" href="#mymodal" class="btn btn-warning">Show me</a>
-      <div class="modal fade" id="mymodal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-            <button class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">my modal</h4>
-            </div>
-          </div>
-          <div class="modal-body">
-            Hello!!!!
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary">OK!</button>
-          </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+          <input type="submit" value="submit" class="btn btn-primary">
         </div>
       </div>
 
-    <div class="container container-fluid" style="padding:20px 0">
-      <p><i class="glyphicon glyphicon-book"></i> Book</p>
-      <button class="btn btn-primary"><i class="glyphicon glyphicon-book"></i> Push me</button>
+    </form>
+
+  </div>
+
+  <div class="container container-fluid" style="padding:20px 0">
+    <p><i class="glyphicon glyphicon-book"></i> Book</p>
+    <button class="btn btn-primary"><i class="glyphicon glyphicon-book"></i> Push me</button>
+    <button class="btn btn-success">Push me</button>
+    <button class="btn btn-info">Push me</button>
+    <div class="btn-group">
+      <button class="btn btn-primary">Push me<i class="glyphicon glyphicon-book"></i></button>
       <button class="btn btn-success">Push me</button>
       <button class="btn btn-info">Push me</button>
-      <div class="btn-group">
-        <button class="btn btn-primary">Push me<i class="glyphicon glyphicon-book"></i></button>
-        <button class="btn btn-success">Push me</button>
-        <button class="btn btn-info">Push me</button>
-      </div>
-    </div>
-
-    <div class="container container-fluid" style="padding:20px 0">
-
-      <div class="btn-group">
-        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        DropDown <span class="caret"></span>
-        </button>
-        <button class="btn btn-primary">DropDown</button>
-        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="">Action1</a></li>
-          <li><a href="">Action1</a></li>
-          <li class="divider"></li>
-          <li><a href="">Action1</a></li>
-          <li><a href="">Action1</a></li>
-        </ul>
-
-      </div>
-
     </div>
   </div>
 
-   <script type="text/javascript">
-         $(function(){
-             $('#war').click(function(){
-               $('tr').attr('class','warning');
-               $('#frm').attr('class','has-error');
-         });
-       });
-   </script>
+  <div class="container container-fluid" style="padding:20px 0">
+
+    <div class="btn-group">
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      DropDown <span class="caret"></span>
+      </button>
+<!--       <ul class="dropdown-menu">
+        <li><a href="">Action1</a></li>
+        <li><a href="">Action1</a></li>
+        <li class="divider"></li>
+        <li><a href="">Action1</a></li>
+        <li><a href="">Action1</a></li>
+      </ul> -->
+
+      <button class="btn btn-primary">DropDown</button>
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="">Action1</a></li>
+        <li><a href="">Action1</a></li>
+        <li class="divider"></li>
+        <li><a href="">Action1</a></li>
+        <li><a href="">Action1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
 
   <script type="text/javascript">
   </script>
