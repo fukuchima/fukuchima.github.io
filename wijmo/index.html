@@ -1,53 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wijmo</title>
-<!--jQuery References--> 
-<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 
-<!--Theme-->
-<link href="http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css" rel="stylesheet" type="text/css" />
+    <!--jQuery References--> 
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 
-<!--Wijmo Widgets CSS-->
-<link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20133.20.min.css" rel="stylesheet" type="text/css" />
+    <!--Theme-->
+    <link href="http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css" rel="stylesheet" type="text/css" />
 
-<!--Wijmo Widgets JavaScript-->
-<script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20133.20.min.js" type="text/javascript"></script>
-<script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20133.20.min.js" type="text/javascript"></script>
+    <!--Wijmo Widgets CSS-->
+    <link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20133.20.min.css" rel="stylesheet" type="text/css" />
 
-<!--RequireJs-->
-<script type="text/javascript" src="http://cdn.wijmo.com/external/require.js"></script>
+    <!--Wijmo Widgets JavaScript-->
+    <script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20133.20.min.js" type="text/javascript"></script>
+    <script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20133.20.min.js" type="text/javascript"></script>
 
-<!--Culture-->
-<script src="http://cdn.wijmo.com/external/cultures/globalize.culture.ja-JP.js" type="text/javascript"></script> 
+    <!--RequireJs-->
+    <script type="text/javascript" src="http://cdn.wijmo.com/external/require.js"></script>
 
-<script type="text/javascript">
-    requirejs.config({
-        baseUrl: "http://cdn.wijmo.com/amd-js/",
-            paths: {
-                "jquery": "jquery-1.9.1.min",
-                "jquery-ui": "jquery-ui-1.10.1.custom.min",
-                "jquery.ui": "jquery-ui",
-                "jquery.mousewheel": "jquery.mousewheel.min",
-                "globalize": "globalize.min"
-            }
-    });
-</script>
+    <!--Culture-->
+    <script src="http://cdn.wijmo.com/external/cultures/globalize.culture.ja-JP.js" type="text/javascript"></script> 
 
-<script id="scriptInit" type="text/javascript">
-    require(["globalize.cultures","wijmo.wijcalendar"], function () {
-        $(document).ready(function () {
-            $("#calendar").wijcalendar({
-                monthCols: 2,
-		culture: "ja-JP"
+    <script type="text/javascript">
+        requirejs.config({
+            baseUrl: "http://cdn.wijmo.com/amd-js/",
+                paths: {
+                    "jquery": "jquery-1.9.1.min",
+                    "jquery-ui": "jquery-ui-1.10.1.custom.min",
+                    "jquery.ui": "jquery-ui",
+                    "jquery.mousewheel": "jquery.mousewheel.min",
+                    "globalize": "globalize.min"
+                }
+        });
+    </script>
+
+    <script id="scriptInit" type="text/javascript">
+        require(["globalize.cultures","wijmo.wijcalendar"], function () {
+            $(document).ready(function () {
+                $("#calendar").wijcalendar({
+                    monthCols: 3,
+            		culture: "ja-JP"
+                });
             });
         });
-    });
-</script>
+    </script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 </head>
-<body>
-    <div id="calendar"></div>
+<body style="padding-top:60px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="">Wijmo Test</a>
+      </div>
+      <div class="collapse navbar-collapse target">
+        <ul class="nav navbar-nav">
+          <li><a href="http://wijmo.c1.grapecity.com" target="_blank">Wijmo</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://www.grapecity.com/tools/" target="_blank">GrapeCity</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="padding:20px 0">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Calendar</div>
+          <div class="panel-body">
+            <div id="calendar"></div>
+          </div>
+        </div>
+    </div>
+
 </body>
 </html>
