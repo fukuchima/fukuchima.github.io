@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML5 Japan Cup 2014</title>
+        <!--Theme-->
+        <link href="http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css" rel="stylesheet" type="text/css" />
+        <!--Wijmo Widgets CSS-->
+        <link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20133.20.min.css" rel="stylesheet" type="text/css" />
+        <!--RequireJs-->
+        <script type="text/javascript" src="http://cdn.wijmo.com/external/require.js"></script>
+
+        <style type="text/css">
+            #carousel
+            {
+                width: 1280px;
+                height: 720px;
+                margin:0 auto 0 auto;
+            }
+            #content
+            {
+                height: 800px;
+            }
+        </style>
+    </head>
+<body>
+<div id="expander1">
+    <h3>HTML5 Japan Cup 2014開催</h3>
+    <div id="content" >
+        <div id="carousel">
+          <ul>
+            <li>
+                <img src="img/slide1.jpg" alt="Slide 1" />
+                <span>HTML5 Japan Cup 2014</span></li>
+            <li>
+                <img src="img/slide2.jpg" alt="Slide 2" />
+                <span>HTML5 Japan Cup 2014開催</span></li>
+            <li>
+                <img src="img/slide3.jpg" alt="Slide 3" />
+                <span>参加の方法</span></li>
+            <li>
+                <img src="img/slide4.jpg" alt="Slide" />
+                <span>テーマ</span></li>
+            <li>
+                <img src="img/slide5.jpg" alt="Slide" />
+                <span>プラットフォーム</span></li>
+            <li>
+                <img src="img/slide6.jpg" alt="Slide" />
+                <span>ライブラリ／APIを利用する特別賞</span></li>
+            <li>
+               <img src="img/slide7.jpg" alt="Slide" />
+                <span>作品募集中</span></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        requirejs.config({
+            baseUrl: "http://cdn.wijmo.com/amd-js/",
+                paths: {
+                    "jquery": "jquery-1.9.1.min",
+                    "jquery-ui": "jquery-ui-1.10.1.custom.min",
+                    "jquery.ui": "jquery-ui",
+                    "jquery.mousewheel": "jquery.mousewheel.min",
+                    "globalize": "globalize.min"
+                }
+       });
+    </script>
+
+    <script id="scriptInit" type="text/javascript">
+        require(["wijmo.wijcarousel"], function () {
+            $(document).ready(function () {
+                $("#carousel").wijcarousel({
+                    display: 1,
+                    showTimer: true,
+                    loop: true,
+                    buttonPosition: "outside",
+                    showControlsOnHover: true
+                });
+            });
+        });
+
+        require(["wijmo.wijexpander"], function () {
+            $(document).ready(function () {
+                $("#expander1").wijexpander({
+                    expandDirection: "bottom",
+                    expanded: false 
+                });
+            });
+        });
+    </script>
+    </body>
+</html>
