@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Maps API</title>
+<style type="text/css">
+	html {height: 100%}
+	body {height: 100%; margin: 20px; padding: 20;background-color: cyan}
+	#map_canvas{height: 100%;
+box-shadow: 0 0 4px #F00, 0 0 12px #000, 5px 5px 5px #000;
+	}
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDZKCLz1b2lm5vjcbD8vAGbVZq8SWNtNlw&amp;sensor=false">	
+</script>
+<script type="text/javascript">
+	var mylat = 38.349183;
+	var mylng = 140.879002; 
+	function init(){
+		var latlng = new google.maps.LatLng(mylat,mylng);
+		var myOptions ={
+			zoom:15,
+			center:latlng,
+			panControlOptions:{
+				position: google.maps.ControlPosition.BOTTOM_CENTER
+			},
+			mapTypeId:google.maps.MapTypeId.HYBIRD //SATELLITE //ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+
+		var marker = new google.maps.Marker({
+			position: latlng,
+			map: map,
+			animation: google.maps.Animation.BOUNCE,
+			title: "楽天球場"
+		});
+	}
+</script>
+</head>
+<body onload="init()">
+	<div id="map_canvas" style="width:100%; height=100%" ></div>
+</body>
+</html>

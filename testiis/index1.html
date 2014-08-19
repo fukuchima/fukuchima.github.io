@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Web Storage</title>
+</head>
+<body>
+	<script>
+		(function(){
+			if (typeof(Storage)=== "undefined"){
+				alert("Web Storage Not Supported");
+			} else {
+				//console.log("Supported");
+				// rule 同一オリジンでデータを保存
+				//種類
+				//SessionStorage タブが閉じられるまで有効
+				//localStorage ブラウザ自体にずっと保存
+				var ls=localStorage;
+				// var ss =sessionStorage;
+				// key,value
+				ls.setItem('fukuchi',100);
+				ls.setItem('Masayuki',200);
+				ls.setItem('sat',300);
+
+				// var user = {
+				// 	name:'obj',
+				// 	score:20
+				// };
+
+				// ls.setItem('user',JSON.stringify(user));
+				// console.dir(JSON.parse(ls.getItem('user')));
+				// console.log(s.getItem('name'));
+
+				// ss.setItem('color','white');
+				// ss.setItem('shape','cube');
+
+				// ls.removeItem('fukuchi');
+				// ss.clear();
+
+				// for (var i=0; i < ls.length;i++){
+				// 	console.log(ls.key(i) + ':' + ls.getItem(ls.key(i)));
+
+				window.addEventListener('storage',function(e){
+					//e.key
+					//e.oldValue, e.newValue
+					//e.storageArea
+					//e.url
+					console.log(e.key + ':' + e.oldValue + '-->' + e.newValue);
+				});
+				//}
+			}
+		})();
+	</script>
+</body>
+</html>

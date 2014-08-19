@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>モンテカルロ</title>
+	<script type="text/javascript">
+		var count = 0;
+		var number = 100000000;
+
+		for (var i = 0; i < number; i++)
+		 {
+		 	var x = -1 + 2 * Math.random();
+		 	var y = -1 + 2 * Math.random();
+		 	if(Math.sqrt(x*x + y*y) <= 1){
+		 		count++;
+		 	}
+		 }
+		 document.write(4 * count/number);
+	 </script>
+
+<body>
+
+</body>
+</html>

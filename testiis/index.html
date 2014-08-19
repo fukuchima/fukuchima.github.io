@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<title>HTML5を使ったメモ帳</title>
+</head>
+<body>
+    <div class="container container-fluid" style="padding:20px 0">
+		<h1>メモ帳</h1>
+		<textarea id="memo" rows="10" cols="40" name="40" class="form-control" style="margin-bottom:15px;"></textarea>
+		<p>
+		<input type="button" id="save" value="Save" class="btn btn-primary">
+		<input type="button" id="clear" value="Clear" class="btn btn-primary">
+		</p>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var ls = localStorage;
+
+			if (ls.getItem('memo')) {
+				$('#memo').val(ls.getItem('memo'));
+			}
+
+			$('#save').click(function(){
+				ls.setItem('memo',$('#memo').val());
+			});
+
+			$('#clear').click(function(){
+				$('#memo').val('');
+				ls.removeItem('memo');
+			});
+
+		});
+	</script>
+</body>
+</html>

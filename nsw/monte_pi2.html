@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>モンテカルロ2</title>
+
+<body>
+	<canvas id="canvas" width="600" height="600"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		var count = 0;
+		var number = 100000;
+		var c_width = canvas.width;
+		var c_height = canvas.height;
+		ctx.shadowColor = "#000000";
+		ctx.shadowBlur = 20;
+		ctx.strokeRect(0,0,c_width * 2,c_height*2);
+		ctx.shadowBlur = 0;
+		for (var i = 0; i < number; i++)
+		 {
+		 	var x = -1 + 2 * Math.random();
+		 	var y = -1 + 2 * Math.random();
+		 	if(Math.sqrt(x*x + y*y) <= 1){
+		 		count++;
+		 		ctx.fillStyle="#FF0000";
+		 	}else{
+		 		ctx.fillStyle="#00FF00";
+		 		}	
+		 	
+		 		x=x*c_width / 2;
+		 		y=y*c_height / 2;
+		 		ctx.fillRect(x+c_width / 2,y+c_height/ 2,1,1);
+ 		}
+ 		document.write(4 * count/number);
+	</script>
+</body>
+</html>
