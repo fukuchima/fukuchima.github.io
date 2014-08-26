@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toc>
+  <item>
+    <title><![CDATA[仙台市]]></title>
+    <tooltip><![CDATA[仙台市]]></tooltip>
+    <item url="Documents/4.htm">
+      <title><![CDATA[概要]]></title>
+      <tooltip><![CDATA[概要]]></tooltip>
+    </item>
+    <item url="Documents/19.htm">
+      <title><![CDATA[地理]]></title>
+      <tooltip><![CDATA[地理]]></tooltip>
+    </item>
+    <item url="Documents/20.htm">
+      <title><![CDATA[気候]]></title>
+      <tooltip><![CDATA[気候]]></tooltip>
+      <item url="Documents/14.htm">
+        <title><![CDATA[主な都市の降雪量・積雪量（平年値）]]></title>
+        <tooltip><![CDATA[主な都市の降雪量・積雪量（平年値）]]></tooltip>
+      </item>
+    </item>
+    <item url="Documents/21.htm">
+      <title><![CDATA[地名]]></title>
+      <tooltip><![CDATA[地名]]></tooltip>
+      <item url="Documents/22.htm">
+        <title><![CDATA[市名の由来]]></title>
+        <tooltip><![CDATA[市名の由来]]></tooltip>
+      </item>
+    </item>
+  </item>
+</toc>
