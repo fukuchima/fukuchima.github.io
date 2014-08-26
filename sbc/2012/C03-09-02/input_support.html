@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>C03-09 : Facebookの情報をフォームに入れる</title>
+<link href="css/input_support.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+<script  type="text/javascript" src="js/input_support.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<h1>C03-09 : Facebookの情報をフォームに入れる</h1>
+<div id="input"><button>フォームに情報を入れる</button></div>
+<form id="form">
+	<table>
+		<tr>
+			<th>お名前</th>
+			<td><input type="text" name="name" id="fName" value=""></td>
+		</tr>
+		<tr>
+			<th>フリガナ</th>
+			<td><input type="text" name="kana" id="fKana" value=""></td>
+		</tr>
+		<tr>
+			<th>メールアドレス</th>
+			<td><input type="text" name="email" id="fEmail" value=""></td>
+		</tr>
+		<tr>
+			<th>電話番号</th>
+			<td><input type="text" name="tel" id="fTel" value=""></td>
+		</tr>
+		<tr>
+			<th>住所</th>
+			<td><input type="text" name="addr" id="fAddr" value=""></td>
+		</tr>
+	</table>
+	<div class="submit"><input type="submit" value="送信"></div>
+</form>
+
+<div id="fb-root"></div>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>C04-02 : Webフォントの使い方</title>
+<link href="//fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Rancho" rel="stylesheet" type="text/css">
+<link href="css/common/general.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+<!--[if lt IE 9]><script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link type="text/css" rel="stylesheet" href="js/dp.SyntaxHighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript">
+<!--
+//オプション
+$(function(){
+	SyntaxHighlighter.autoloader(
+			"bash                     js/dp.SyntaxHighlighter/scripts/shBrushBash.js",
+			"css                      js/dp.SyntaxHighlighter/scripts/shBrushCss.js",
+			"html xml xhtml           js/dp.SyntaxHighlighter/scripts/shBrushXml.js",
+			"js                       js/dp.SyntaxHighlighter/scripts/shBrushJScript.js"
+	);
+	SyntaxHighlighter.all();
+});
+-->
+</script>
+</head>
+<body>
+<article id="container">
+	<header>
+		<h1>C04-02 : Webフォントの使い方</h1>
+	</header>
+
+	<nav id="index">
+		<ol>
+			<li><a href="#webfont">通常のテキストフォントを使う</a></li>
+			<li><a href="#iconfont">アイコンフォントを使う</a></li>
+			<li><a href="#original">オリジナルのアイコンフォントを使う</a></li>
+		</ol>
+	</nav>
+
+	<section class="sample" id="webfont">
+		<h2>通常のテキストフォントを使う</h2>
+		<p class="desc">日本語に対応したフォントはファイルサイズが大きいため読み込みに時間がかかります。</p>
+		<div class="box">
+			<div class="canvas">
+				<p class="kouzan">あいうえお<br>アイウエオ<br>日常会話</p>
+				<p class="tanuki">あいうえお<br>アイウエオ<br>日常会話</p>
+			</div>
+			<div class="code">
+<pre class="brush: html;">
+<p class="kouzan">あいうえお<br>アイウエオ<br>日常会話</p>
+<p class="tanuki">あいうえお<br>アイウエオ<br>日常会話</p>
+</pre>
+<pre class="brush: css;">
+@font-face {
+	font-family: 'kouzan';
+	src: url('../fonts/kouzan.eot');	/* IE6～8 */
+	src: url('../fonts/kouzan.eot?#iefix') format('embedded-opentype'),	/* IE6～8 */
+		url('../fonts/kouzan.woff') format('woff'),	/* 主要最新ブラウザ */
+		url('../fonts/kouzan.ttf') format('truetype');	/* IE以外の旧ブラウザ */
+}
+
+@font-face {
+	font-family: 'tanuki';
+	src: url('../fonts/TanukiMagic.eot');
+	src: url('../fonts/TanukiMagic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TanukiMagic.woff') format('woff'),
+		url('../fonts/TanukiMagic.ttf') format('truetype');
+}
+
+.kouzan {
+	font-family: 'kouzan';
+}
+
+.tanuki {
+	font-family: 'tanuki';
+}
+</pre>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="canvas">
+				<p class="kouzan deco1">あいうえお<br>アイウエオ<br>日常会話</p>
+				<p class="tanuki deco2">あいうえお<br>アイウエオ<br>日常会話</p>
+			</div>
+			<div class="code">
+<pre class="brush: html;">
+<p class="kouzan deco1">あいうえお<br>アイウエオ<br>日常会話</p>
+<p class="tanuki deco2">あいうえお<br>アイウエオ<br>日常会話</p>
+</pre>
+<pre class="brush: css;">
+.deco1 {
+	color: #0066cc;
+	text-shadow: 2px 2px 4px #666;
+}
+
+.deco2 {
+	color: #ff9900;
+	text-decoration: underline;
+	letter-spacing: 5px;
+}
+</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="sample" id="iconfont">
+		<h2>アイコンフォントを使う</h2>
+		<p class="desc">アイコンフォントを指定した要素に「I」や「t」を記述するとアイコンになります。</p>
+		<div class="box">
+			<div class="canvas">
+				<p class="symbol">ISCFZAU</p>
+				<p class="symbol deco3">
+					<span class="twitter">t</span>
+					<span class="fb">f</span>
+					<span class="gp">g</span>
+					<span class="skype">s</span>
+					<span class="rss">r</span>
+					<span class="yt">y</span>
+					<span class="fav">R</span>
+					<span class="tag">,</span>
+				</p>
+			</div>
+			<div class="code">
+<pre class="brush: html;">
+<p class="symbol">ISCFZAU</p>
+<p class="symbol deco3">
+	<span class="twitter">t</span>
+	<span class="fb">f</span>
+	<span class="gp">g</span>
+	<span class="skype">s</span>
+	<span class="rss">r</span>
+	<span class="yt">y</span>
+	<span class="fav">R</span>
+	<span class="tag">,</span>
+</p>
+</pre>
+<pre class="brush: css;">
+@font-face {
+	font-family: 'symbol';
+	src: url('../fonts/websymbols-regular-webfont.eot');
+	src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/websymbols-regular-webfont.woff') format('woff'),
+		url('../fonts/websymbols-regular-webfont.ttf') format('truetype');
+}
+
+.symbol {
+	font-family: 'symbol';
+}
+
+.deco3 {
+	text-shadow: 1px 1px 2px #999;
+}
+
+.twitter { color: #00BEF6; }
+.fb { color: #3B5998; }
+.gp { color: #4285F4; }
+.skype { color: #00AEF3; }
+.rss { color: #E37F53; }
+.yt { color: #C4302B; }
+.fav { color: #FFE78A; }
+.tag { color: #006699; }
+</pre>
+			</div>
+		</div>
+
+		<p class="desc">HTML上にアイコンのために無意味な「I」や「t」を記述したくない場合はCSSのbefore（after）擬似要素とcontentプロパティを使います。</p>
+		<div class="box">
+			<div class="canvas">
+				<ul class="icons">
+					<li><a href="javascript: void(0);" class="twIcon">Twitter</a></li>
+					<li><a href="javascript: void(0);" class="fbIcon">Facebook</a></li>
+					<li><a href="javascript: void(0);" class="rssIcon">RSS</a></li>
+				</ul>
+			</div>
+			<div class="code">
+<pre class="brush: html;">
+<ul class="icons">
+	<li><a href="javascript: void(0);" class="twIcon">Twitter</a></li>
+	<li><a href="javascript: void(0);" class="fbIcon">Facebook</a></li>
+	<li><a href="javascript: void(0);" class="rssIcon">RSS</a></li>
+</ul>
+</pre>
+<pre class="brush: css;">
+.icons a {
+	color: #333;
+	text-decoration: none;
+}
+
+.icons a:before {
+	margin-right: 5px;
+	position: relative;
+	top: -0.1em;
+	font-family: 'symbol';
+}
+
+.twIcon:before {
+	color: #00BEF6;
+	content: 't';
+}
+
+.fbIcon:before {
+	color: #3B5998;
+	content: 'f';
+}
+
+.rssIcon:before {
+	color: #E37F53;
+	content: 'r';
+}
+</pre>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="sample" id="original">
+		<h2>オリジナルのアイコンフォントを使う</h2>
+		<p class="desc">IcoMoonでオリジナルのアイコンフォントを作成できます。</p>
+		<div class="box">
+			<div class="canvas">
+				<p class="oricons">
+					<span class="ipIcon">iPhone</span><br>
+					<span class="flIcon">花</span><br>
+					<span class="beeIcon">蜂</span>
+				</p>
+			</div>
+			<div class="code">
+<pre class="brush: html;">
+<p class="oricons">
+	<span class="ipIcon">iPhone</span><br>
+	<span class="flIcon">花</span><br>
+	<span class="beeIcon">蜂</span>
+</p>
+</pre>
+<pre class="brush: css;">
+@font-face {
+	font-family: 'oricon';
+	src: url('../fonts/oricon.eot');
+	src: url('../fonts/oricon.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/oricon.woff') format('woff'),
+	url('../fonts/oricon.ttf') format('truetype');
+}
+
+.oricons {
+	font-size: 2em;
+	line-height: 1.5;
+}
+
+.oricons span:before {
+	margin-right: 5px;
+	position: relative;
+	color: #333;
+	font-family: 'oricon';
+}
+
+.ipIcon:before {
+	content: '!';
+}
+
+.flIcon:before {
+	content: '"';
+}
+
+.beeIcon:before {
+	content: '#';
+}
+</pre>
+			</div>
+		</div>
+	</section>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "utf-8";
+.tab {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.tab .menu {
+	margin-bottom: -2px;
+	padding-left: 5px;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.tab .menu .tabMenu a {
+	margin-right: 5px;
+	padding: 4px 10px 3px;
+	width: 136px;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+						from(#999),
+						to(#666));
+	background-image: -moz-linear-gradient(
+						#999,
+						#666);
+	background-image: linear-gradient(
+						#999,
+						#666);
+	background-color: #999;
+	border: 2px solid #ccc;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	display: block;
+	float: left;
+	position: relative;
+	top: 5px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+}
+
+.tab .menu .tabMenu a.current,
+.tab .menu .tabMenu a:hover {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background: #fff;
+	top: 0;
+	color: #333;
+}
+
+.tab .tabBox {
+	padding: 12px 10px 10px 10px;
+	border: 2px solid #ccc;
+	text-align: center;
+}
+

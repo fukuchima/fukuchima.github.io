@@ -1,0 +1,815 @@
+@charset "utf-8";
+body {
+	-webkit-text-size-adjust: none;
+}
+
+header {
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 2.4em;
+}
+
+h2 {
+	margin: 30px 0 10px;
+	padding: 5px;
+	border-bottom: 2px dotted #999;
+	font-size: 2em;
+}
+
+.sample .canvas {
+	background-color: #fff;
+	overflow: hidden;
+	font-size: 1.4em;
+}
+
+.sample .canvas ul {
+	padding: 0 10px;
+	list-style: disc;
+}
+
+.sample .canvas > ul > li {
+	margin-bottom: 5px;
+}
+
+.notes {
+	margin-bottom: 10px;
+}
+
+.sample .desc {
+	margin: 0 0 10px;
+	font-size: 1.4em;
+}
+
+@media screen and (min-width: 900px) {
+#container {
+	margin: 0 auto;
+	padding: 30px 0;
+	width: 900px;
+}
+
+#index ol {
+	margin-bottom: 15px;
+	overflow: hidden;
+	font-size: 1.4em;
+}
+
+#index li {
+	margin-bottom: 5px;
+	width: 33%;
+	float: left;
+}
+
+.sample .box {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #ccc;
+	overflow: hidden;
+}
+
+.sample .canvas {
+	padding: 20px;
+	width: 220px;
+	min-height: 80px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+.sample .code {
+	width: 620px;
+	float: right;
+	font-size: 1.4rem;
+}
+}
+
+@media screen and (max-width: 899px) {
+#container {
+	padding: 10px;
+}
+
+#index ol {
+	margin: 0 -10px 15px;
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+	font-size: 1.4em;
+}
+
+#index li {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+#index li a {
+	padding: 15px 10px;
+	background: #F2F2F2;
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+
+.sample .box {
+	margin-bottom: 30px;
+}
+
+.sample .canvas {
+	padding: 10px;
+	min-height: 50px;
+	border: 1px solid #ccc;
+}
+
+.sample .code {
+	font-size: 1.2rem;
+}
+}
+/*------------------------------------------------------------
+	グラデーション
+------------------------------------------------------------*/
+#grad .canvas > div {
+	height: 100px;
+}
+
+#grad1 {
+	background-image: -webkit-gradient(linear, left top, left bottom, 
+						from(#333),
+						to(#ccc));
+	background-image: -moz-linear-gradient(
+						#333,
+						#ccc);
+	background-image: linear-gradient(
+						#333,
+						#ccc);
+}
+
+#grad2 {
+	background-image: -webkit-gradient(linear, left top, right bottom, 
+						from(#ffcc00),
+						color-stop(0.50, #ff6600),
+						color-stop(0.50, #ff3300),
+						to(#ff6600));
+	background-image: -moz-linear-gradient(
+						-45deg,
+						#ffcc00 0%,
+						#ff6600 50%,
+						#ff3300 50%,
+						#ff6600);
+	background-image: linear-gradient(
+						-45deg,
+						#ffcc00 0%,
+						#ff6600 50%,
+						#ff3300 50%,
+						#ff6600);
+}
+
+#grad3 {
+	background-image: -webkit-gradient(radial,
+						center center, 0,
+						center center, 50,
+						from(#9cf),
+						to(#369));
+	background-image: -moz-radial-gradient(
+						110px 50px,
+						circle closest-side,
+						#9cf 0%,
+						#369 100%);
+	background-image: radial-gradient(
+						110px 50px,
+						circle closest-side,
+						#9cf 0%,
+						#369 100%);
+}
+
+/*------------------------------------------------------------
+	ボックスシャドウ
+------------------------------------------------------------*/
+#bShadow .canvas > div {
+	height: 100px;
+}
+
+
+#bShadow1 {
+	-webkit-box-shadow: 0 0 6px #666;
+	-moz-box-shadow: 0 0 6px #666;
+	box-shadow: 0 0 6px #666;
+}
+
+#bShadow2 {
+	-webkit-box-shadow: inset 0 0 6px #666;
+	-moz-box-shadow: inset 0 0 6px #666;
+	box-shadow: inset 0 0 6px #666;
+}
+
+#bShadow3 {
+	-webkit-box-shadow: 0 0 6px #f00, inset 0 0 6px #00f;
+	-moz-box-shadow: 0 0 6px #f00, inset 0 0 6px #00f;
+	box-shadow: 0 0 6px #f00, inset 0 0 6px #00f;
+}
+
+/*------------------------------------------------------------
+	テキストシャドウ
+------------------------------------------------------------*/
+#tShadow .canvas > div {
+	font-size: 2.4em;
+	text-align: center;
+}
+
+#tShadow1 {
+	text-shadow: 1px 1px 3px #666;
+}
+
+#tShadow2 {
+	text-shadow: 0 0 6px #666;
+	color: #fff;
+}
+
+#tShadow3 {
+	text-shadow: -1px -1px 2px #f00, 1px 1px 2px #00f;
+}
+
+#tShadow4 {
+	text-shadow: -40px -10px 0 #f00, 40px 10px 10px #00f;
+}
+
+/*------------------------------------------------------------
+	角丸
+------------------------------------------------------------*/
+#radius .canvas > div {
+	height: 100px;
+	border: 1px solid #f00;
+}
+
+#radius1 {
+	border-radius: 20px;
+}
+
+#radius2 {
+	border-radius: 10px 15px 20px 25px;
+}
+
+#radius3 {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 25px;
+}
+
+#radius4 {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+/*------------------------------------------------------------
+	ボーダーイメージ
+------------------------------------------------------------*/
+#bImage .canvas > div {
+	height: 100px;
+}
+
+#bImage1 {
+	-webkit-border-image: url(../img/bg_dot.png) 15 round;
+	-moz-border-image: url(../img/bg_dot.png) 15 round;
+	border-image: url(../img/bg_dot.png) 15 round;
+	border-width: 10px; 
+	border-style: solid;
+}
+
+#bImage2 {
+	-webkit-border-image: url(../img/bg_dot.png) 15 round stretch;
+	-moz-border-image: url(../img/bg_dot.png) 15 round stretch;
+	border-image: url(../img/bg_dot.png) 15 round stretch;
+	border-width: 10px; 
+	border-style: solid;
+}
+
+#bImage3 {
+	-webkit-border-image: url(../img/bg_dot.png) 30;
+	-moz-border-image: url(../img/bg_dot.png) 30;
+	border-image: url(../img/bg_dot.png) 30;
+	border-width: 30px; 
+	border-style: solid;
+}
+
+/*------------------------------------------------------------
+	背景の操作
+------------------------------------------------------------*/
+#gGround .canvas > div {
+	height: 100px;
+}
+
+#gGround1 {
+	background-image: url(../img/bg1.jpg), url(../img/bg2.jpg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: left, right;
+}
+
+#bGround2 {
+	-webkit-background-clip: border-box;
+	-moz-background-clip: border-box;
+	background-clip: border-box;
+	background-image: url(../img/bg3.jpg);
+	border: 10px dotted #f00;
+	padding: 10px;
+}
+
+#bGround3 {
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	background-image: url(../img/bg3.jpg);
+	border: 10px dotted #f00;
+	padding: 10px;
+}
+
+#bGround4 {
+	-webkit-background-clip: content-box;
+	-moz-background-clip: content-box;
+	background-clip: content-box;
+	background-image: url(../img/bg3.jpg);
+	border: 10px dotted #f00;
+	padding: 10px;
+}
+
+/*------------------------------------------------------------
+	新しい色の指定方法と透過
+------------------------------------------------------------*/
+#rgba .canvas > div {
+	height: 100px;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+#rgba .canvas {
+	background-image: url(../img/bg_dot.png);
+}
+
+#opacity {
+	background-color: #f00;
+	opacity: 0.5;
+}
+
+#rgba1 {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#rgba2 {
+	background-color: rgb(255, 0, 0);
+}
+
+#rgba3 {
+	background-color: rgb(255, 0, 0);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*------------------------------------------------------------
+	拡大・縮小
+------------------------------------------------------------*/
+#scale .canvas > div {
+	margin: 0 auto;
+	width: 220px;
+	height: 100px;
+}
+
+#scale1 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: scaleX(0.5);
+	-moz-transform: scaleX(0.5);
+	transform: scaleX(0.5);
+}
+
+#scale2 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: scaleY(0.5);
+	-moz-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+#scale3 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: scale(1.5, 1.5);
+	-moz-transform: scale(1.5, 1.5);
+	transform: scale(1.5, 1.5);
+}
+
+/*------------------------------------------------------------
+	回転
+------------------------------------------------------------*/
+#rotate .canvas > div {
+	margin: 0 auto;
+	width: 220px;
+	height: 100px;
+}
+
+#rotate1 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#rotate2 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+#rotate3 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/*------------------------------------------------------------
+	傾斜
+------------------------------------------------------------*/
+#skew .canvas > div {
+	margin: 0 auto;
+	width: 220px;
+	height: 100px;
+}
+
+#skew1 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: skewX(10deg);
+	-moz-transform: skewX(10deg);
+	transform: skewX(10deg);
+}
+
+#skew2 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: skewY(10deg);
+	-moz-transform: skewY(10deg);
+	transform: skewY(10deg);
+}
+
+#skew3 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: skew(10deg, 20deg);
+	-moz-transform: skew(10deg, 20deg);
+	transform: skew(10deg, 20deg);
+}
+
+/*------------------------------------------------------------
+	移動
+------------------------------------------------------------*/
+#translate .canvas > div {
+	margin: 0 auto;
+	width: 220px;
+	height: 100px;
+}
+
+#translate1 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: translateX(100px);
+	-moz-transform: translateX(100px);
+	transform: translateX(100px);
+}
+
+#translate2 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+#translate3 {
+	background: url(../img/bg3.jpg) no-repeat;
+	-webkit-transform: translate(100px, 50px);
+	-moz-transform: translate(100px, 50px);
+	transform: translate(100px, 50px);
+}
+
+/*------------------------------------------------------------
+	アニメーション（transition）
+------------------------------------------------------------*/
+#transition .canvas {
+	min-height: 100px;
+}
+
+#transition1 {
+	height: 100px;
+	background-color: #ccc;
+	-webkit-transition-property: height, background-color;
+	-webkit-transition-duration: 2s;
+	-webkit-timing-function: linear;
+	-webkit-transition-delay: 0;
+	-moz-transition-property: height, background-color;
+	-moz-transition-duration: 2s;
+	-moz-timing-function: linear;
+	-moz-transition-delay: 0;
+	transition-property: height, background-color;
+	transition-duration: 2s;
+	timing-function: linear;
+	transition-delay: 0;
+}
+
+#transition1:hover {
+	height: 0;
+	background-color: #f00;
+}
+
+#transition2 {
+	height: 100px;
+	background-color: #ccc;
+	-webkit-transition-property: -webkit-transform, background-color;
+	-webkit-transition-duration: 2s;
+	-webkit-timing-function: ease;
+	-webkit-transition-delay: 0;
+	-moz-transition-property: -moz-transform, background-color;
+	-moz-transition-duration: 2s;
+	-moz-timing-function: ease;
+	-moz-transition-delay: 0;
+	transition-property: transform, background-color;
+	transition-duration: 2s;
+	timing-function: ease;
+	transition-delay: 0;
+}
+
+#transition2:hover {
+	background-color: #f00;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/*------------------------------------------------------------
+	アニメーション（animation）
+------------------------------------------------------------*/
+#animation .canvas {
+	min-height: 100px;
+}
+
+#animation .canvas > div {
+	height: 100px;
+}
+
+#animation1 {
+	height: 100px;
+	background-color: #c00;
+	-webkit-animation-name: resize, bg;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 10s;
+	-moz-animation-name: resize, bg;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 10s;
+	animation-name: resize, bg;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+}
+
+@-webkit-keyframes resize {
+	50% {	height: 0;	}
+}
+
+@-moz-keyframes resize {
+	50% {	height: 0;	}
+}
+
+@keyframes resize {
+	50% {	height: 0;	}
+}
+
+@-webkit-keyframes bg {
+	0% {	background-color: #c00;	}
+	33% {	background-color: #0c0;	}
+	66% {	background-color: #00c;	}
+}
+
+@-moz-keyframes bg {
+	0% {	background-color: #c00;	}
+	33% {	background-color: #0c0;	}
+	66% {	background-color: #00c;	}
+}
+
+@keyframes bg {
+	0% {	background-color: #c00;	}
+	33% {	background-color: #0c0;	}
+	66% {	background-color: #00c;	}
+}
+
+#animation2 {
+	background-color: #c00;
+	-webkit-animation-name: rotate, bg;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 10s;
+	-moz-animation-name: rotate, bg;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 10s;
+	animation-name: rotate, bg;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+}
+
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(180deg);
+	}
+}
+
+@-moz-keyframes rotate {
+	100% {	-moz-transform: rotate(180deg);	}
+}
+
+@keyframes rotate {
+	100% {	transform: rotate(180deg);	}
+}
+
+/*------------------------------------------------------------
+	E[foo^="bar"]
+------------------------------------------------------------*/
+#selector01 .canvas a[href^="#"] {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+#selector01 .canvas a[href^="http"] {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E[foo$="bar"]
+------------------------------------------------------------*/
+#selector02 .canvas a[href$=".html"] {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+#selector02 .canvas a[href$=".php"] {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E[foo*="bar"]
+------------------------------------------------------------*/
+#selector03 .canvas [href*="www"] {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:rootはiframe
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+	E:first-child(n)
+------------------------------------------------------------*/
+#selector05 .canvas ul li:first-child > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:last-child(n)
+------------------------------------------------------------*/
+#selector06 .canvas ul li:last-child > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:nth-child(n)
+------------------------------------------------------------*/
+#selector07 .canvas ul li:nth-child(2) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+#selector07 .canvas ul li:nth-child(3) li:nth-child(even) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:nth-last-child(n)
+------------------------------------------------------------*/
+#selector08 .canvas ul li:nth-last-child(2) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:first-of-type 
+------------------------------------------------------------*/
+#selector09 .canvas ul li:first-of-type > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:last-of-type 
+------------------------------------------------------------*/
+#selector10 .canvas ul li:last-of-type  > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:nth-of-type(n)
+------------------------------------------------------------*/
+#selector11 .canvas ul li:nth-of-type(2) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:nth-last-of-type(n)
+------------------------------------------------------------*/
+#selector12 .canvas ul li:nth-last-of-type(2) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:only-child
+------------------------------------------------------------*/
+#selector13 .canvas ul li:only-child > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:only-of-type 
+------------------------------------------------------------*/
+#selector14 .canvas :only-of-type > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:empty 
+------------------------------------------------------------*/
+#selector15 .canvas span:empty {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:target 
+------------------------------------------------------------*/
+#selector16 .canvas :target {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+/*------------------------------------------------------------
+	E:enabled 
+------------------------------------------------------------*/
+#selector17 .canvas :enabled {
+	margin-left: 20px;
+	border: 1px solid #f00;
+}
+
+/*------------------------------------------------------------
+	E:disabled 
+------------------------------------------------------------*/
+#selector18 .canvas :disabled {
+	margin-left: 20px;
+	border: 1px solid #f00;
+}
+
+/*------------------------------------------------------------
+	E:checked 
+------------------------------------------------------------*/
+#selector19 .canvas {
+	text-align: center;
+}
+
+#selector19 .canvas :checked {
+	margin-left: 50px;
+}
+
+/*------------------------------------------------------------
+	E::selection
+------------------------------------------------------------*/
+#selector20 .canvas p::-moz-selection {
+	background-color: #f00;
+	color: #fff;
+}
+
+#selector20 .canvas p::selection {
+	background-color: #f00;
+	color: #fff;
+}
+
+/*------------------------------------------------------------
+	E:not(s)
+------------------------------------------------------------*/
+#selector21 .canvas .document > span:not(.hoge1) {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}
+
+#selector21 .canvas .document li:not(:first-child) > span {
+	padding-right: 30px;
+	background: url(../img/hit.png) no-repeat right center;
+}

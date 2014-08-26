@@ -1,0 +1,73 @@
+@charset "utf-8";
+/*------------------------------------------------------------
+	jquery.tabjs
+------------------------------------------------------------*/
+#slider {
+	margin: 0 auto;
+	padding: 7px;
+	width: 900px;
+	background: #fff;
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+#slider .slideFrame {
+	width: 900px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#slider .slideFrame .slideSet {
+	position: relative;
+}
+
+#slider .slideFrame .slide {
+	float: left;
+}
+
+#slider .slideFrame .slide img {
+	vertical-align: top;
+}
+
+#slider .prev,
+#slider .next {
+	padding: 5px 10px;
+	background: #fff;
+	text-align: center;
+	position: absolute;
+	top: 30px;
+}
+
+#slider .prev {
+	left: 4px;
+}
+
+#slider .next {
+	right: 4px;
+}
+
+#slider .prev a,
+#slider .next a {
+	color: #333;
+	text-decoration: none;
+}
+
+#thumbnail {
+	margin: 0 auto;
+	width: 914px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#thumbnail a {
+	margin-right: 7px;
+	padding: 3px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+#thumbnail a:hover {
+	border: 1px solid #f99;
+}
+

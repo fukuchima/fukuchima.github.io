@@ -1,0 +1,23 @@
+@charset "utf-8";
+body {
+	margin: 50px;
+	background: #eee;
+	text-align: center;
+}
+
+h2 {
+	margin: 30px 0 10px;
+}
+
+.svg {
+	width: 900px;
+	height: 101px;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+#style {
+	fill: #CC0;
+	stroke: #399;
+}

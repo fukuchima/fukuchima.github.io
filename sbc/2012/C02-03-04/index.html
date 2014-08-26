@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>C02-03 : CSS3で表現できるデザイン</title>
+<link href="css/common/general.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+<link type="text/css" rel="stylesheet" href="js/dp.SyntaxHighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript" src="js/jquery.page-scroller-308.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript" src="js/dp.SyntaxHighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript">
+<!--
+//オプション
+$(function(){
+	SyntaxHighlighter.autoloader(
+		 "bash                      js/dp.SyntaxHighlighter/scripts/shBrushBash.js"
+		 ,"css                      js/dp.SyntaxHighlighter/scripts/shBrushCss.js"
+		 ,"html xml xhtml           js/dp.SyntaxHighlighter/scripts/shBrushXml.js"
+	);
+	SyntaxHighlighter.all();
+} );
+-->
+</script>
+</head>
+<body>
+
+<article id="container">
+	<header>
+		<h1>C02-03 : CSS3で表現できるデザイン</h1>
+	</header>
+	<nav id="index">
+		<ol>
+			<li><a href="#btn">ボタン</a></li>
+			<li><a href="#pFrame">フォトフレーム</a></li>
+			<li><a href="#flip">めくれ効果</a></li>
+		</ol>
+	</nav>
+
+	<section class="sample" id="btn">
+		<h2>ボタン</h2>
+		<div class="box">
+			<div class="canvas">
+				<a href="javascript: void(0)" id="btn1">ボタン</a>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+	padding: 15px 10px;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+						from(#ffcc00),
+						color-stop(0.50, #ff6600),
+						color-stop(0.50, #ff3300),
+						to(#ff6600));
+	background-image: -moz-linear-gradient(
+						#ffcc00 0%,
+						#ff6600 50%,
+						#ff3300 50%,
+						#ff6600);
+	background-image: linear-gradient(
+						#ffcc00 0%,
+						#ff6600 50%,
+						#ff3300 50%,
+						#ff6600);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+	box-shadow: 0 0 4px #999;
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+</pre>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="canvas">
+				<a href="javascript: void(0)" id="btn2">ボタン</a>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#btn2 {
+	padding: 15px 10px;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+						from(#ffcc00),
+						to(#ff6600));
+	background-image: -moz-linear-gradient(
+						#ffcc00,
+						#ff6600);
+	background-image: linear-gradient(
+						#ffcc00,
+						#ff6600);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+	box-shadow: 0 0 4px #999;
+	position: relative;
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+	width: 300%;
+	height: 200%;
+	background: #fff;
+	border-radius: 50%;
+	display: block;
+	opacity: 0.4;
+	position: absolute;
+	top: -150%;
+	left: -130%;
+	content: "";
+}
+</pre>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="canvas">
+				<a href="javascript: void(0)" id="btn3">ボタン</a>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#btn3 {
+	width: 100px;
+	height: 100px;
+	background: #ddd;
+	border-radius: 50px;
+	-webkit-box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+	box-shadow: 0 0 4px #999;
+	display: table-cell;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+</pre>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="canvas">
+				<a href="javascript: void(0)" id="btn4">ロールオーバー</a>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#btn4 {
+	padding: 15px 10px;
+	background-color: #f90;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+						from(rgba(255, 255, 255, 0.5)),
+						to(rgba(255, 255, 255, 0)));
+	background-image: -moz-linear-gradient(
+						rgba(255, 255, 255, 0.5),
+						rgba(255, 255, 255, 0));
+	background-image: linear-gradient(
+						rgba(255, 255, 255, 0.5),
+						rgba(255, 255, 255, 0));
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+	box-shadow: 0 0 4px #999;
+	position: relative;
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	transition-property: background-color;
+	transition-duration: 1s;
+}
+
+#btn4:hover {
+	background-color: #c60;
+}
+</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="sample" id="pFrame">
+		<h2>フォトフレーム</h2>
+		<div class="box">
+			<div class="canvas">
+				<div id="pFrame1"><img src="img/bg3.jpg" width="210" height="90" alt=""></div>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#pFrame1 {
+	margin: 0 auto;
+	width: 210px;
+	padding: 5px;
+	border: 1px solid #ccc;	
+	-webkit-box-shadow: 2px 2px 4px #999;
+	-moz-box-shadow: 2px 2px 4px #999;
+	box-shadow: 2px 2px 4px #999;
+}
+</pre>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="canvas">
+				<div id="pFrame2"><img src="img/bg3.jpg" width="210" height="90" alt=""></div>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#pFrame2 {
+	margin: 0 auto;
+	width: 210px;
+	padding: 5px;
+	border: 1px solid #ccc;	
+	-webkit-box-shadow: 2px 2px 4px #999;
+	-moz-box-shadow: 2px 2px 4px #999;
+	box-shadow: 2px 2px 4px #999;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+</pre>
+			</div>
+		</div>
+	</section>
+
+	<section class="sample" id="flip">
+		<h2>めくれ効果</h2>
+		<div class="box">
+			<div class="canvas">
+				<div id="flip1"><div class="frame"><img src="img/bg3.jpg" width="210" height="90" alt=""></div></div>
+			</div>
+			<div class="code">
+<pre class="brush: css;">
+#flip1 {
+	margin: 0 auto;
+	width: 220px;
+	position: relative;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+}
+
+#flip1:after {
+	width: 120px;
+	height: 10px;
+	background: transparent;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	right: 5px;
+	bottom: 9px;
+	z-index: 1;
+	content: "";
+}
+
+#flip1 .frame {
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	position: relative;
+	z-index: 10;
+}
+</pre>
+			</div>
+		</div>
+	</section>
+</article>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+html, body,
+#container, #conts {
+	min-height: 100%;
+}
+
+body {
+	background: #00A5CE url(../img/bg01.png) repeat-y fixed center 0;
+	font-size: 1.4em;
+}
+
+#container {
+	background: url(../img/bg02.png) repeat-y fixed center 0;
+}
+
+#conts {
+	margin: 0 auto;
+	padding: 100px 0;
+	width: 600px;
+	color: #fff;
+	text-align: center;
+	line-height: 2.5;
+}
+
+#conts img {
+	vertical-align: top;
+}
+
+#conts h1 {
+	margin-bottom: 100px;
+}
+
+#conts h2 {
+	margin: 100px 0 50px;
+}
+
+#conts p {
+	margin-bottom: 1em;
+}
+
+#conts .returnTop {
+	text-align: center;
+}
+
+#conts .returnTop a {
+	color: #fff;
+}

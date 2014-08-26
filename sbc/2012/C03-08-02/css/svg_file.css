@@ -1,0 +1,28 @@
+@charset "utf-8";
+body {
+	margin: 50px;
+	background: #eee;
+	text-align: center;
+}
+
+h2 {
+	margin: 30px 0 10px;
+}
+
+.sample {
+	margin-bottom: 30px;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	display: inline-block;
+}
+
+	* html .sample {
+		display: inline;
+		zoom: 1;
+	}
+
+	*+html .sample {
+		display: inline;
+		zoom: 1;
+	}
